@@ -10,10 +10,10 @@ export default function TableHeader(props) {
   } = props;
 
   const {
-    sortBy
+    sortBy, sortOrder
   } = tableContext;
 
   return (
-    <th data-id={text} onClick={eventContext.onTableHeaderClick}>{text} {sortBy === text && "(sorted)"}</th>
+    <th data-id={text} onClick={eventContext.onTableHeaderClick}>{text} {sortBy === text && sortOrder}</th>
   )
 }
