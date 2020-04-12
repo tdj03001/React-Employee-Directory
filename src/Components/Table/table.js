@@ -3,10 +3,13 @@ import data from "../../data.json"
 import TableRow from "./components/TableRow/tableRow";
 import TableHeader from "./components/TableHeader/tableHeader";
 import { TableContext, EventContext } from "./tableContexts";
+import { AppContext } from "../../AppContexts";
 
 export default function Table() {
   const [sortBy, setSortBy] = React.useState();
   const [sortOrder, setSortOrder] = React.useState();
+
+  const { searchText } = React.useContext(AppContext);
 
   const handleTableHeaderClick = (event) => {
     const target = event.currentTarget;
@@ -43,13 +46,18 @@ export default function Table() {
     onTableHeaderClick: handleTableHeaderClick
   }
 
-  let sortedData = [...data];
+  let displayData = [...data];
+
+  if (searchText !== "") {
+    displayData = displayData.filter(({ email }) => new RegExp(searchText, "g").test(email));
+  }
+
 
   const changeSortOrder = sortOrder === "Ascending" ? 1 : -1;
 
   switch (sortBy) {
     case "Name":
-      sortedData = sortedData.sort((a, b) => {
+      displayData = displayData.sort((a, b) => {
         const name1 = `${a.name.first} ${a.name.last}`
         const name2 = `${b.name.first} ${b.name.last}`
         return name1.localeCompare(name2) * changeSortOrder;
@@ -58,15 +66,15 @@ export default function Table() {
       break;
 
     case "Location":
-      sortedData = sortedData.sort((a, b) => a.location.city.localeCompare(b.location.city) * changeSortOrder)
+      displayData = displayData.sort((a, b) => a.location.city.localeCompare(b.location.city) * changeSortOrder)
       break;
 
     case "Phone":
-      sortedData = sortedData.sort((a, b) => a.phone.localeCompare(b.phone) * changeSortOrder)
+      displayData = displayData.sort((a, b) => a.phone.localeCompare(b.phone) * changeSortOrder)
       break;
 
     case "Email":
-      sortedData = sortedData.sort((a, b) => a.email.localeCompare(b.email) * changeSortOrder)
+      displayData = displayData.sort((a, b) => a.email.localeCompare(b.email) * changeSortOrder)
       break;
 
     default:
@@ -88,7 +96,7 @@ export default function Table() {
           </thead>
           <tbody>
             {
-              sortedData.map((person) => (
+              displayData.map((person) => (
                 <TableRow key={person.phone} person={person} />
               ))
             }
