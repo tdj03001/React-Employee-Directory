@@ -11,6 +11,7 @@ The site starts with a full list of employees which the user can sort by column 
 
 # Screenshot
 
+![Screenshot](public/screenshot-employee-directory.png)
 
 # Live site
 
