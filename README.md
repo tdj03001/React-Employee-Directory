@@ -1,21 +1,24 @@
 # React-Employee-Directory
 
 
-# Purpose
+## Purpose
 
 The employee directory is an app that allows employers and team members to view basic insensitive data about other employees such as name, photo, and contact information. It is a light weight app for quick reference to employee profiles with the goal of unifying this information in a single, easy to use repository.
 
-# Usage
+## Usage
 
-The site starts with a full list of employees which the user can sort by column headers and filter using the search box.
+The site starts with a full list of employees (random data from internet. Our clients would provide actual employee data) which the user can sort by column headers and filter using the search box.
 
-# Screenshot
+Users click column headers one time to sort the list by that column in ascending order. Clicking the column header a second time will reverse the sort to descending order. A third click will reset to the originally rendered order.
+
+## Screenshot
 
 ![Screenshot](public/screenshot-employee-directory.png)
 
-# Live site
+### Live site
 
+https://dry-eyrie-01937.herokuapp.com/
 
-# GitHub repo
+### GitHub repo
 
 https://github.com/tdj03001/React-Employee-Directory
