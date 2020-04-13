@@ -85,7 +85,7 @@ export default function Table() {
   return (
     <TableContext.Provider value={tableContext}>
       <EventContext.Provider value={eventContext}>
-        <table border="1">
+        <table className="center" border="1">
           <thead>
             <tr>
               <TableHeader text="Name" />
