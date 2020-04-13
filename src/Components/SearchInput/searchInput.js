@@ -6,6 +6,6 @@ export default function SearchInput() {
   const eventContext = React.useContext(EventContext);
 
   return (
-    <input value={appContext.searchText} onChange={eventContext.onInputChange} placeholder={"Enter email"} />
+    <input value={appContext.searchText} onChange={eventContext.onInputChange} placeholder={"Search by email"} />
   )
 }
