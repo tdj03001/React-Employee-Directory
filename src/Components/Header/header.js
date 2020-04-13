@@ -1,7 +1,8 @@
 import React from "react"
+import "../../header.css"
 
 export default function Header() {
   return (
-    <div>Employee Directory</div>
+    <div className="title"><span>Employee Directory</span></div>
   )
 }
