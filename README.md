@@ -11,6 +11,8 @@ The site starts with a full list of employees (random data from internet. Our cl
 
 Users click column headers one time to sort the list by that column in ascending order. Clicking the column header a second time will reverse the sort to descending order. A third click will reset to the originally rendered order.
 
+Users can also start entering text into the input field and the app will auto-filter to matching results without having to click a button or 'enter.'
+
 ## Screenshot
 
 ![Screenshot](public/screenshot-employee-directory.png)
