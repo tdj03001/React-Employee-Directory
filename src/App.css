@@ -1,6 +1,8 @@
 .App {
+  margin-top: 400px;
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -12,6 +14,13 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .App {
+    margin-top: 0px;
+  }
+}
+
 
 .App-header {
   background-color: #282c34;
