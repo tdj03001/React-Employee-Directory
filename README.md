@@ -19,8 +19,8 @@ Users can also start entering text into the input field and the app will auto-fi
 
 ### Live site
 
-https://dry-eyrie-01937.herokuapp.com/
+https://reactstaffdirectory.herokuapp.com/
 
 ### GitHub repo
 
-https://github.com/tdj03001/React-Employee-Directory
+https://github.com/tdj03001/React-Staff-Directory
